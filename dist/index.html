@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Outfit', sans-serif;
+        background-color: #050214; /* Deep Indigo Background */
+        color: #ffffff;
+      }
+      /* Vivid Colors */
+      :root {
+        --neon-p1: #D900FF; /* Electric Purple (Player X) */
+        --neon-p2: #39FF14; /* Neon Lime (Player O) */
+      }
+      
+      .neon-text-p1 {
+        color: var(--neon-p1);
+        text-shadow: 2px 2px 0px rgba(0,0,0,0.5), 0 0 10px var(--neon-p1);
+      }
+      .neon-text-p2 {
+        color: var(--neon-p2);
+        text-shadow: 2px 2px 0px rgba(0,0,0,0.5), 0 0 10px var(--neon-p2);
+      }
+      
+      .neon-box-p1 {
+        box-shadow: 0 0 15px var(--neon-p1), inset 0 0 10px var(--neon-p1);
+        border-color: var(--neon-p1);
+      }
+      .neon-box-p2 {
+        box-shadow: 0 0 15px var(--neon-p2), inset 0 0 10px var(--neon-p2);
+        border-color: var(--neon-p2);
+      }
+      
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      /* Glitch Effect Classes - Static */
+      .glitch-text {
+        position: relative;
+        color: white;
+        font-weight: 900;
+      }
+      .glitch-text::before,
+      .glitch-text::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #050214;
+      }
+      .glitch-text::before {
+        left: 2px;
+        text-shadow: -1px 0 var(--neon-p1);
+        clip: rect(24px, 550px, 90px, 0);
+      }
+      .glitch-text::after {
+        left: -2px;
+        text-shadow: -1px 0 var(--neon-p2);
+        clip: rect(85px, 550px, 140px, 0);
+      }
+    </style>
+
+  <link rel="stylesheet" href="/index.css">
+    <script type="importmap">
+    {
+      "imports": {
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "react": "https://aistudiocdn.com/react@^19.2.0"
+      }
+    }
+    </script>
+  <script type="module" crossorigin src="/neon-mind-tic-tac-toe/assets/index-B-oYNaXK.js"></script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
